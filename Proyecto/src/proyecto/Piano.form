@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -52,11 +56,12 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CsActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="CsKeyPressed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -81,6 +86,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -109,6 +116,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -137,6 +146,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -165,6 +176,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -193,6 +206,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -221,6 +236,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -243,12 +260,12 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DKeyPressed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="DKeyTyped"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -267,11 +284,12 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="EKeyPressed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -290,6 +308,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -312,6 +332,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -334,12 +356,12 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="CKeyPressed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="CKeyTyped"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -358,6 +380,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -380,6 +404,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -402,6 +428,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -424,6 +452,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -446,6 +476,8 @@
             <BevelBorder/>
           </Border>
         </Property>
+        <Property name="focusable" type="boolean" value="false"/>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="verticalAlignment" type="int" value="3"/>
       </Properties>
       <Events>
@@ -460,10 +492,11 @@
     <Component class="javax.swing.JRadioButton" name="JRadioDrum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Drums"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="590" y="20" width="107" height="-1"/>
+          <AbsoluteConstraints x="560" y="20" width="107" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -472,6 +505,9 @@
         <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Piano"/>
       </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="teclado"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="40" y="20" width="-1" height="-1"/>
@@ -485,6 +521,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Piano - Drums"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

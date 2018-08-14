@@ -16,8 +16,9 @@ import javax.swing.JOptionPane;
  * @author Edu
  */
 public class Piano extends javax.swing.JFrame {
-    String a;
-   
+
+    
+
     public Piano() {
         initComponents();
     }
@@ -26,6 +27,7 @@ public class Piano extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         Cs = new javax.swing.JButton();
         Ds = new javax.swing.JButton();
         Ds1 = new javax.swing.JButton();
@@ -59,15 +61,12 @@ public class Piano extends javax.swing.JFrame {
         Cs.setForeground(new java.awt.Color(255, 255, 255));
         Cs.setText("C#");
         Cs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Cs.setFocusable(false);
+        Cs.setSelected(true);
         Cs.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Cs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CsActionPerformed(evt);
-            }
-        });
-        Cs.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                CsKeyPressed(evt);
             }
         });
         getContentPane().add(Cs);
@@ -78,6 +77,8 @@ public class Piano extends javax.swing.JFrame {
         Ds.setForeground(new java.awt.Color(255, 255, 255));
         Ds.setText("D#");
         Ds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Ds.setFocusable(false);
+        Ds.setSelected(true);
         Ds.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Ds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +93,8 @@ public class Piano extends javax.swing.JFrame {
         Ds1.setForeground(new java.awt.Color(255, 255, 255));
         Ds1.setText("D#1");
         Ds1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Ds1.setFocusable(false);
+        Ds1.setSelected(true);
         Ds1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Ds1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +109,8 @@ public class Piano extends javax.swing.JFrame {
         Gs.setForeground(new java.awt.Color(255, 255, 255));
         Gs.setText("G#");
         Gs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Gs.setFocusable(false);
+        Gs.setSelected(true);
         Gs.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Gs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +125,8 @@ public class Piano extends javax.swing.JFrame {
         Fs.setForeground(new java.awt.Color(255, 255, 255));
         Fs.setText("F#");
         Fs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Fs.setFocusable(false);
+        Fs.setSelected(true);
         Fs.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Fs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +141,8 @@ public class Piano extends javax.swing.JFrame {
         Bb.setForeground(new java.awt.Color(255, 255, 255));
         Bb.setText("Bb");
         Bb.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Bb.setFocusable(false);
+        Bb.setSelected(true);
         Bb.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Bb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +157,8 @@ public class Piano extends javax.swing.JFrame {
         Cs1.setForeground(new java.awt.Color(255, 255, 255));
         Cs1.setText("C#1");
         Cs1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Cs1.setFocusable(false);
+        Cs1.setSelected(true);
         Cs1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Cs1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,18 +171,12 @@ public class Piano extends javax.swing.JFrame {
         D.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         D.setText("D");
         D.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        D.setFocusable(false);
+        D.setSelected(true);
         D.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         D.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DActionPerformed(evt);
-            }
-        });
-        D.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                DKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                DKeyTyped(evt);
             }
         });
         getContentPane().add(D);
@@ -180,15 +185,12 @@ public class Piano extends javax.swing.JFrame {
         E.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         E.setText("E");
         E.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        E.setFocusable(false);
+        E.setSelected(true);
         E.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         E.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EActionPerformed(evt);
-            }
-        });
-        E.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                EKeyPressed(evt);
             }
         });
         getContentPane().add(E);
@@ -197,6 +199,8 @@ public class Piano extends javax.swing.JFrame {
         F.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         F.setText("F");
         F.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        F.setFocusable(false);
+        F.setSelected(true);
         F.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         F.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +213,8 @@ public class Piano extends javax.swing.JFrame {
         G.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         G.setText("G");
         G.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        G.setFocusable(false);
+        G.setSelected(true);
         G.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         G.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,18 +227,12 @@ public class Piano extends javax.swing.JFrame {
         C.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         C.setText("C");
         C.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        C.setFocusable(false);
+        C.setSelected(true);
         C.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         C.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CActionPerformed(evt);
-            }
-        });
-        C.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                CKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                CKeyTyped(evt);
             }
         });
         getContentPane().add(C);
@@ -241,6 +241,8 @@ public class Piano extends javax.swing.JFrame {
         A.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         A.setText("A");
         A.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        A.setFocusable(false);
+        A.setSelected(true);
         A.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,6 +255,8 @@ public class Piano extends javax.swing.JFrame {
         B.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         B.setText("B");
         B.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        B.setFocusable(false);
+        B.setSelected(true);
         B.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,6 +269,8 @@ public class Piano extends javax.swing.JFrame {
         C1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         C1.setText("C1");
         C1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        C1.setFocusable(false);
+        C1.setSelected(true);
         C1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,6 +283,8 @@ public class Piano extends javax.swing.JFrame {
         D2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         D2.setText("D2");
         D2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        D2.setFocusable(false);
+        D2.setSelected(true);
         D2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         D2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,6 +297,8 @@ public class Piano extends javax.swing.JFrame {
         E3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         E3.setText("E3");
         E3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        E3.setFocusable(false);
+        E3.setSelected(true);
         E3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         E3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,17 +309,24 @@ public class Piano extends javax.swing.JFrame {
         E3.setBounds(630, 210, 60, 249);
 
         JRadioDrum.setText("Drums");
+        JRadioDrum.setFocusable(false);
         getContentPane().add(JRadioDrum);
-        JRadioDrum.setBounds(590, 20, 107, 24);
+        JRadioDrum.setBounds(560, 20, 107, 24);
 
         JRadioPiano.setSelected(true);
         JRadioPiano.setText("Piano");
+        JRadioPiano.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                teclado(evt);
+            }
+        });
         getContentPane().add(JRadioPiano);
         JRadioPiano.setBounds(40, 20, 64, 24);
 
         JLabelError.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JLabelError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JLabelError.setText("Piano - Drums");
+        JLabelError.setFocusable(false);
         getContentPane().add(JLabelError);
         JLabelError.setBounds(140, 10, 430, 40);
 
@@ -317,214 +334,201 @@ public class Piano extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GsActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/G_s.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/Gq_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/G_s.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Gq_Drum.wav");
+        }
     }//GEN-LAST:event_GsActionPerformed
 
     private void BbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BbActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/Bb.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/Bb_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/Bb.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Bb_Drum.wav");
+        }
     }//GEN-LAST:event_BbActionPerformed
 
     private void CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/C.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/C_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/C.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/C_Drum.wav");
+        }
     }//GEN-LAST:event_CActionPerformed
 
-    private void CKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CKeyPressed
-
-    }//GEN-LAST:event_CKeyPressed
-    
-    private void DKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DKeyPressed
-        
-    }//GEN-LAST:event_DKeyPressed
-
     private void DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DActionPerformed
-            if (JRadioPiano.isSelected()){         
-                a = "/proyecto/notas/D.wav";
-                repNota1(a);
-            }
-            if (JRadioDrum.isSelected()){         
-                a = "/proyecto/notas/D_Drum.wav";
-                repNota1(a);
-            }
+        if (JRadioPiano.isSelected()) {
+            
+            repNota1("/proyecto/notas/D.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+            
+            repNota1("/proyecto/notas/D_Drum.wav");
+        }
     }//GEN-LAST:event_DActionPerformed
 
     private void EActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/E.wav");
-            }
-            if (JRadioDrum.isSelected()){        
-                repNota1("/proyecto/notas/E_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/E.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+            repNota1("/proyecto/notas/E_Drum.wav");
+        }
     }//GEN-LAST:event_EActionPerformed
 
     private void FActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/F.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/F_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/F.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/F_Drum.wav");
+        }
     }//GEN-LAST:event_FActionPerformed
 
-    private void CKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CKeyTyped
- 
-    }//GEN-LAST:event_CKeyTyped
-
-    private void DKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DKeyTyped
-
-    }//GEN-LAST:event_DKeyTyped
-
-    private void EKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EKeyPressed
-
-    }//GEN-LAST:event_EKeyPressed
-
     private void GActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/G.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/G_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/G.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/G_Drum.wav");
+        }
     }//GEN-LAST:event_GActionPerformed
 
     private void AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/A.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/A_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/A.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/A_Drum.wav");
+        }
     }//GEN-LAST:event_AActionPerformed
 
     private void BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BActionPerformed
-            if (JRadioPiano.isSelected()){         
-               
-                repNota1("/proyecto/notas/B.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/B_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/B.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/B_Drum.wav");
+        }
     }//GEN-LAST:event_BActionPerformed
 
     private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
-             if (JRadioPiano.isSelected()){         
-               
-                repNota1("/proyecto/notas/C1.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/C1_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/C1.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/C1_Drum.wav");
+        }
     }//GEN-LAST:event_C1ActionPerformed
 
     private void D2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D2ActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/D1.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/D1_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/D1.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/D1_Drum.wav");
+        }
     }//GEN-LAST:event_D2ActionPerformed
 
     private void E3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E3ActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/E1.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-               
-                repNota1("/proyecto/notas/E1_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/E1.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/E1_Drum.wav");
+        }
     }//GEN-LAST:event_E3ActionPerformed
 
     private void CsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CsActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/C_s.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                repNota1("/proyecto/notas/Cq_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/C_s.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+            repNota1("/proyecto/notas/Cq_Drum.wav");
+        }
     }//GEN-LAST:event_CsActionPerformed
 
     private void DsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DsActionPerformed
-            if (JRadioPiano.isSelected()){         
-                repNota1("/proyecto/notas/D_s.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-               
-                repNota1("/proyecto/notas/Dq_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+            repNota1("/proyecto/notas/D_s.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Dq_Drum.wav");
+        }
     }//GEN-LAST:event_DsActionPerformed
 
     private void FsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FsActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/F_s.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/Fq_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/F_s.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Fq_Drum.wav");
+        }
     }//GEN-LAST:event_FsActionPerformed
 
     private void Cs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cs1ActionPerformed
-            if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/C_s1.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/Cq1_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/C_s1.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Cq1_Drum.wav");
+        }
     }//GEN-LAST:event_Cs1ActionPerformed
 
     private void Ds1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ds1ActionPerformed
-        if (JRadioPiano.isSelected()){         
-                
-                repNota1("/proyecto/notas/D_s1.wav");
-            }
-            if (JRadioDrum.isSelected()){         
-                
-                repNota1("/proyecto/notas/Dq1_Drum.wav");
-            }
+        if (JRadioPiano.isSelected()) {
+
+            repNota1("/proyecto/notas/D_s1.wav");
+        }
+        if (JRadioDrum.isSelected()) {
+
+            repNota1("/proyecto/notas/Dq1_Drum.wav");
+        }
     }//GEN-LAST:event_Ds1ActionPerformed
 
-    private void CsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CsKeyPressed
-        
-    }//GEN-LAST:event_CsKeyPressed
+    private void teclado(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_teclado
+if (evt.getKeyCode() == KeyEvent.VK_A) {
+    C.doClick();
+}
+else if (evt.getKeyCode() == KeyEvent.VK_W) {
+    Cs.doClick();
+}
+    
+
+    }//GEN-LAST:event_teclado
     public void repNota1(String a) {
-        InputStream iAudio;           
-        if(JRadioPiano.isSelected() && JRadioDrum.isSelected()){
+        InputStream iAudio;
+        if (JRadioPiano.isSelected() && JRadioDrum.isSelected()) {
             JLabelError.setText("");
             JLabelError.setText("Debe seleccionar solo un instrumento");
         }
-        if (JRadioPiano.isSelected() && !JRadioDrum.isSelected()){
+        if (JRadioPiano.isSelected() && !JRadioDrum.isSelected()) {
             try {
                 JLabelError.setText("");
                 JLabelError.setText("Piano");
@@ -532,12 +536,11 @@ public class Piano extends javax.swing.JFrame {
                 iAudio = new FileInputStream(new File(url.getPath()));
                 AudioStream iMusic = new AudioStream(iAudio);
                 AudioPlayer.player.start(iMusic);
-                }
-            catch (IOException e){
+            } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
-        if (JRadioDrum.isSelected() && !JRadioPiano.isSelected()){
+        if (JRadioDrum.isSelected() && !JRadioPiano.isSelected()) {
             try {
                 JLabelError.setText("");
                 JLabelError.setText("Drums");
@@ -545,28 +548,14 @@ public class Piano extends javax.swing.JFrame {
                 iAudio = new FileInputStream(new File(url.getPath()));;
                 AudioStream iMusic = new AudioStream(iAudio);
                 AudioPlayer.player.start(iMusic);
-                }
-            catch (IOException e){
+            } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, e);
             }//crear switch//
         }
     }
-    public void keyPressed(KeyEvent e){
-        InputStream iAudio;
-        if (e.getKeyCode() == KeyEvent.VK_ENTER && JRadioPiano.isSelected() && !JRadioDrum.isSelected()){
-            try {
-                JLabelError.setText("");
-                JLabelError.setText("Piano");
-                URL url = new Piano().getResource("/proyecto/notas/D_s1.wav");
-                iAudio = new FileInputStream(new File(url.getPath()));
-                AudioStream iMusic = new AudioStream(iAudio);
-                AudioPlayer.player.start(iMusic);
-                }
-            catch (IOException ev){
-                JOptionPane.showMessageDialog(null, ev);
-            }//crear switch//
-        }
-    }
+
+    
+
     public InputStream getResourceAsStream(String name) {
         name = resolveName(name, this.getClass());
         ClassLoader cl = getClass().getClassLoader();
@@ -584,7 +573,7 @@ public class Piano extends javax.swing.JFrame {
         }
         return cl.getResource(name);
     }
-    
+
     private String resolveName(String name, Object clazz) {
         if (name == null) {
             return name;
@@ -604,6 +593,7 @@ public class Piano extends javax.swing.JFrame {
         }
         return name;
     }
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -652,5 +642,6 @@ public class Piano extends javax.swing.JFrame {
     private javax.swing.JLabel JLabelError;
     private javax.swing.JRadioButton JRadioDrum;
     private javax.swing.JRadioButton JRadioPiano;
+    private javax.swing.ButtonGroup buttonGroup1;
     // End of variables declaration//GEN-END:variables
 }
