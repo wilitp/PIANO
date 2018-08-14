@@ -26,6 +26,7 @@ public class Piano extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         Cs = new javax.swing.JButton();
         Ds = new javax.swing.JButton();
         Ds1 = new javax.swing.JButton();
@@ -298,14 +299,16 @@ public class Piano extends javax.swing.JFrame {
         getContentPane().add(E3);
         E3.setBounds(630, 210, 60, 249);
 
+        buttonGroup1.add(JRadioDrum);
         JRadioDrum.setText("Drums");
         getContentPane().add(JRadioDrum);
-        JRadioDrum.setBounds(590, 20, 107, 24);
+        JRadioDrum.setBounds(590, 20, 107, 25);
 
+        buttonGroup1.add(JRadioPiano);
         JRadioPiano.setSelected(true);
         JRadioPiano.setText("Piano");
         getContentPane().add(JRadioPiano);
-        JRadioPiano.setBounds(40, 20, 64, 24);
+        JRadioPiano.setBounds(40, 20, 59, 25);
 
         JLabelError.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JLabelError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -548,25 +551,10 @@ public class Piano extends javax.swing.JFrame {
                 }
             catch (IOException e){
                 JOptionPane.showMessageDialog(null, e);
-            }//crear switch//
+            }
         }
     }
-    public void keyPressed(KeyEvent e){
-        InputStream iAudio;
-        if (e.getKeyCode() == KeyEvent.VK_ENTER && JRadioPiano.isSelected() && !JRadioDrum.isSelected()){
-            try {
-                JLabelError.setText("");
-                JLabelError.setText("Piano");
-                URL url = new Piano().getResource("/proyecto/notas/D_s1.wav");
-                iAudio = new FileInputStream(new File(url.getPath()));
-                AudioStream iMusic = new AudioStream(iAudio);
-                AudioPlayer.player.start(iMusic);
-                }
-            catch (IOException ev){
-                JOptionPane.showMessageDialog(null, ev);
-            }//crear switch//
-        }
-    }
+
     public InputStream getResourceAsStream(String name) {
         name = resolveName(name, this.getClass());
         ClassLoader cl = getClass().getClassLoader();
@@ -625,8 +613,10 @@ public class Piano extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            GrabadorAudio grab = new GrabadorAudio();
             public void run() {
                 new Piano().setVisible(true);
+                grab.setVisible(true);
             }
         });
     }
@@ -652,5 +642,6 @@ public class Piano extends javax.swing.JFrame {
     private javax.swing.JLabel JLabelError;
     private javax.swing.JRadioButton JRadioDrum;
     private javax.swing.JRadioButton JRadioPiano;
+    private javax.swing.ButtonGroup buttonGroup1;
     // End of variables declaration//GEN-END:variables
 }
