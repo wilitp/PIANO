@@ -5,6 +5,7 @@
  */
 package proyecto;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
 import java.net.URL;
@@ -13,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Edu
+ * @author Edu y wilitp
  */
 public class Piano extends javax.swing.JFrame {
 
@@ -21,6 +22,10 @@ public class Piano extends javax.swing.JFrame {
 
     public Piano() {
         initComponents();
+        InputCheck c = new InputCheck(JRadioPiano, C, KeyEvent.VK_A);
+        c.start();
+        InputCheck cS = new InputCheck(JRadioPiano, Cs, KeyEvent.VK_W);
+        cS.start();
     }
 
     @SuppressWarnings("unchecked")
@@ -51,7 +56,6 @@ public class Piano extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(705, 550));
-        setPreferredSize(new java.awt.Dimension(705, 550));
         setResizable(false);
         setSize(new java.awt.Dimension(705, 550));
         getContentPane().setLayout(null);
@@ -235,6 +239,11 @@ public class Piano extends javax.swing.JFrame {
                 CActionPerformed(evt);
             }
         });
+        C.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                CKeyPressed(evt);
+            }
+        });
         getContentPane().add(C);
         C.setBounds(10, 210, 60, 249);
 
@@ -308,11 +317,13 @@ public class Piano extends javax.swing.JFrame {
         getContentPane().add(E3);
         E3.setBounds(630, 210, 60, 249);
 
+        buttonGroup1.add(JRadioDrum);
         JRadioDrum.setText("Drums");
         JRadioDrum.setFocusable(false);
         getContentPane().add(JRadioDrum);
         JRadioDrum.setBounds(560, 20, 107, 24);
 
+        buttonGroup1.add(JRadioPiano);
         JRadioPiano.setSelected(true);
         JRadioPiano.setText("Piano");
         JRadioPiano.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -513,15 +524,17 @@ public class Piano extends javax.swing.JFrame {
     }//GEN-LAST:event_Ds1ActionPerformed
 
     private void teclado(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_teclado
-if (evt.getKeyCode() == KeyEvent.VK_A) {
-    C.doClick();
-}
-else if (evt.getKeyCode() == KeyEvent.VK_W) {
-    Cs.doClick();
-}
+//if (evt.getKeyCode() == KeyEvent.VK_A) {
+//    C.doClick();}
+//else if (evt.getKeyCode() == KeyEvent.VK_W) {
+//    Cs.doClick();}
     
 
     }//GEN-LAST:event_teclado
+
+    private void CKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CKeyPressed
     public void repNota1(String a) {
         InputStream iAudio;
         if (JRadioPiano.isSelected() && JRadioDrum.isSelected()) {
@@ -593,7 +606,7 @@ else if (evt.getKeyCode() == KeyEvent.VK_W) {
         }
         return name;
     }
-
+    
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -612,13 +625,15 @@ else if (evt.getKeyCode() == KeyEvent.VK_W) {
             java.util.logging.Logger.getLogger(Piano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        Piano pianito = new Piano();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Piano().setVisible(true);
+                pianito.setVisible(true);
             }
         });
+        //InputCheck t1 = new InputCheck();
+        //t1.start();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -644,4 +659,5 @@ else if (evt.getKeyCode() == KeyEvent.VK_W) {
     private javax.swing.JRadioButton JRadioPiano;
     private javax.swing.ButtonGroup buttonGroup1;
     // End of variables declaration//GEN-END:variables
+
 }
