@@ -10,14 +10,13 @@ import java.io.*;
 import java.net.URL;
 import sun.audio.*;
 import javax.swing.JOptionPane;
+import jdk.nashorn.internal.runtime.Debug;
 
 /**
  *
  * @author Edu
  */
 public class Piano extends javax.swing.JFrame {
-
-    
 
     public Piano() {
         initComponents();
@@ -308,11 +307,13 @@ public class Piano extends javax.swing.JFrame {
         getContentPane().add(E3);
         E3.setBounds(630, 210, 60, 249);
 
+        buttonGroup1.add(JRadioDrum);
         JRadioDrum.setText("Drums");
         JRadioDrum.setFocusable(false);
         getContentPane().add(JRadioDrum);
-        JRadioDrum.setBounds(560, 20, 107, 24);
+        JRadioDrum.setBounds(560, 20, 107, 25);
 
+        buttonGroup1.add(JRadioPiano);
         JRadioPiano.setSelected(true);
         JRadioPiano.setText("Piano");
         JRadioPiano.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -321,7 +322,7 @@ public class Piano extends javax.swing.JFrame {
             }
         });
         getContentPane().add(JRadioPiano);
-        JRadioPiano.setBounds(40, 20, 64, 24);
+        JRadioPiano.setBounds(40, 20, 59, 25);
 
         JLabelError.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         JLabelError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -335,44 +336,36 @@ public class Piano extends javax.swing.JFrame {
 
     private void GsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GsActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/G_s.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Gq_Drum.wav");
         }
     }//GEN-LAST:event_GsActionPerformed
 
     private void BbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BbActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/Bb.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Bb_Drum.wav");
         }
     }//GEN-LAST:event_BbActionPerformed
 
     private void CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/C.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/C_Drum.wav");
         }
     }//GEN-LAST:event_CActionPerformed
 
     private void DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DActionPerformed
         if (JRadioPiano.isSelected()) {
-            
             repNota1("/proyecto/notas/D.wav");
         }
         if (JRadioDrum.isSelected()) {
-            
             repNota1("/proyecto/notas/D_Drum.wav");
         }
     }//GEN-LAST:event_DActionPerformed
@@ -474,53 +467,73 @@ public class Piano extends javax.swing.JFrame {
             repNota1("/proyecto/notas/D_s.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Dq_Drum.wav");
         }
     }//GEN-LAST:event_DsActionPerformed
 
     private void FsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FsActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/F_s.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Fq_Drum.wav");
         }
     }//GEN-LAST:event_FsActionPerformed
 
     private void Cs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cs1ActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/C_s1.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Cq1_Drum.wav");
         }
     }//GEN-LAST:event_Cs1ActionPerformed
 
     private void Ds1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ds1ActionPerformed
         if (JRadioPiano.isSelected()) {
-
             repNota1("/proyecto/notas/D_s1.wav");
         }
         if (JRadioDrum.isSelected()) {
-
             repNota1("/proyecto/notas/Dq1_Drum.wav");
         }
     }//GEN-LAST:event_Ds1ActionPerformed
 
     private void teclado(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_teclado
-if (evt.getKeyCode() == KeyEvent.VK_A) {
-    C.doClick();
-}
-else if (evt.getKeyCode() == KeyEvent.VK_W) {
-    Cs.doClick();
-}
-    
-
+        if (evt.getKeyCode() == KeyEvent.VK_A) {
+            C.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_W) {
+            Cs.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_S) {
+            D.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_E) {
+            Ds.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_D) {
+            E.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_F) {
+            F.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_T) {
+            Fs.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_G) {
+            G.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_Y) {
+            Gs.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_H) {
+            A.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_U) {
+            Bb.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_J) {
+            B.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_K) {
+            C1.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_O) {
+            Cs1.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_L) {
+            D2.doClick();
+        } else if (evt.getKeyCode() == KeyEvent.VK_P) {
+            Ds1.doClick();
+        } else if (evt.getKeyCode() == 0) {
+            E3.doClick();
+        }
     }//GEN-LAST:event_teclado
     public void repNota1(String a) {
         InputStream iAudio;
@@ -553,8 +566,6 @@ else if (evt.getKeyCode() == KeyEvent.VK_W) {
             }//crear switch//
         }
     }
-
-    
 
     public InputStream getResourceAsStream(String name) {
         name = resolveName(name, this.getClass());
@@ -615,10 +626,14 @@ else if (evt.getKeyCode() == KeyEvent.VK_W) {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            GrabadorAudio grab = new GrabadorAudio();
+
             public void run() {
                 new Piano().setVisible(true);
+                grab.setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
