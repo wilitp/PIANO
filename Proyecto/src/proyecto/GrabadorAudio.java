@@ -10,6 +10,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 public class GrabadorAudio extends javax.swing.JFrame {
 
@@ -21,24 +22,22 @@ public class GrabadorAudio extends javax.swing.JFrame {
     private AudioFileFormat.Type m_targetType;
     private AudioInputStream m_audioInputStream;
     private File m_outputFile;
-    private String ruta = "C:\\Users\\Edu\\Music\\Grabacion.wav";
-
+    private String ruta;
+    private File ruta_Archivo;
     private javax.swing.JButton jB_Grabar;
     private javax.swing.JButton jB_Parar;
     private javax.swing.JButton jB_Ruta;
-    @SuppressWarnings("unchecked")
 
     private void initComponents() {
         
         this.setLocation(700, 0);
         this.setResizable(false);
-        this.setAlwaysOnTop(true);
         jB_Grabar = new javax.swing.JButton();
         jB_Parar = new javax.swing.JButton();
         jB_Ruta = new javax.swing.JButton();
- 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
- 
+        
+        jB_Grabar.setEnabled(false);
         jB_Grabar.setText("Grabar");
         jB_Grabar.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +57,7 @@ public class GrabadorAudio extends javax.swing.JFrame {
         jB_Ruta.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jB_RutaActionPerformed(evt);
+                jB_Grabar.setEnabled(true);
             }
         });
  
@@ -90,16 +90,15 @@ public class GrabadorAudio extends javax.swing.JFrame {
     private void jB_RutaActionPerformed(java.awt.event.ActionEvent evt) {
         JFileChooser explorador = new JFileChooser("C:/musica");
         explorador.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-        if (explorador.showOpenDialog(this)==JFileChooser.APPROVE_OPTION){
-            ruta = explorador.getSelectedFile().toString();
+        if (explorador.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
+            ruta = explorador.getSelectedFile().toString()+ ".wav";
         }
     }
  
     private void jB_GrabarActionPerformed(java.awt.event.ActionEvent evt) {
- 
         AudioFormat audioFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,
         44100.0F, 16, 2, 4, 44100.0F, false);
-        File ruta_Archivo = new File(ruta);
+        ruta_Archivo = new File(ruta);
         DataLine.Info	
         info = new DataLine.Info(TargetDataLine.class, audioFormat);
         TargetDataLine	targetDataLine = null;
@@ -117,7 +116,6 @@ public class GrabadorAudio extends javax.swing.JFrame {
     }
     
     public void Graba_Salida_Audio(TargetDataLine line,AudioFileFormat.Type targetType,File file){
- 
         jB_Grabar.setEnabled(false);
         jB_Parar.setEnabled(true);
         m_line = line;
@@ -139,11 +137,21 @@ public class GrabadorAudio extends javax.swing.JFrame {
 	}
 
     private void jB_PararActionPerformed(java.awt.event.ActionEvent evt) {
- 
-        jB_Grabar.setEnabled(true);
-        jB_Parar.setEnabled(false);
-        m_line.stop();
-        m_line.close();
+        int guardar = JOptionPane.showConfirmDialog(null, "Desea guardar el audio?", "Confirmacion", JOptionPane.YES_NO_OPTION);
+            if (guardar == JOptionPane.NO_OPTION) {
+                jB_Grabar.setEnabled(true);
+                jB_Parar.setEnabled(false);
+                m_line.stop();
+                m_line.close();
+                m_outputFile.delete();
+             
+            }else if(guardar == JOptionPane.YES_OPTION){
+                jB_Grabar.setEnabled(true);
+                jB_Parar.setEnabled(false);
+                m_line.stop();
+                m_line.close();
+            }
+        
     }
 }
 

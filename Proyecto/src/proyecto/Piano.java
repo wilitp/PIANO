@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto;
 
 import java.awt.event.KeyEvent;
@@ -535,6 +530,7 @@ public class Piano extends javax.swing.JFrame {
             E3.doClick();
         }
     }//GEN-LAST:event_teclado
+   
     public void repNota1(String a) {
         InputStream iAudio;
         if (JRadioPiano.isSelected() && JRadioDrum.isSelected()) {
@@ -563,7 +559,7 @@ public class Piano extends javax.swing.JFrame {
                 AudioPlayer.player.start(iMusic);
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, e);
-            }//crear switch//
+            }
         }
     }
 
@@ -622,9 +618,7 @@ public class Piano extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Piano.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             GrabadorAudio grab = new GrabadorAudio();
 
