@@ -17,7 +17,6 @@ public class Piano extends javax.swing.JFrame {
         initComponents();
     }
 
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -44,6 +43,8 @@ public class Piano extends javax.swing.JFrame {
         JLabelError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Piano");
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(705, 550));
         setPreferredSize(new java.awt.Dimension(705, 550));
         setResizable(false);
@@ -163,7 +164,7 @@ public class Piano extends javax.swing.JFrame {
         Cs1.setBounds(520, 60, 60, 186);
 
         D.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        D.setText("D");
+        D.setText("Re");
         D.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         D.setFocusable(false);
         D.setSelected(true);
@@ -177,7 +178,7 @@ public class Piano extends javax.swing.JFrame {
         D.setBounds(80, 210, 60, 249);
 
         E.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        E.setText("E");
+        E.setText("Mi");
         E.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         E.setFocusable(false);
         E.setSelected(true);
@@ -191,7 +192,7 @@ public class Piano extends javax.swing.JFrame {
         E.setBounds(150, 210, 60, 249);
 
         F.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        F.setText("F");
+        F.setText("Fa");
         F.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         F.setFocusable(false);
         F.setSelected(true);
@@ -205,7 +206,7 @@ public class Piano extends javax.swing.JFrame {
         F.setBounds(210, 210, 60, 249);
 
         G.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        G.setText("G");
+        G.setText("Sol");
         G.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         G.setFocusable(false);
         G.setSelected(true);
@@ -219,7 +220,7 @@ public class Piano extends javax.swing.JFrame {
         G.setBounds(280, 210, 60, 249);
 
         C.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        C.setText("C");
+        C.setText("Do");
         C.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         C.setFocusable(false);
         C.setSelected(true);
@@ -233,7 +234,7 @@ public class Piano extends javax.swing.JFrame {
         C.setBounds(10, 210, 60, 249);
 
         A.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        A.setText("A");
+        A.setText("La");
         A.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         A.setFocusable(false);
         A.setSelected(true);
@@ -247,7 +248,7 @@ public class Piano extends javax.swing.JFrame {
         A.setBounds(350, 210, 60, 249);
 
         B.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        B.setText("B");
+        B.setText("Si");
         B.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         B.setFocusable(false);
         B.setSelected(true);
@@ -261,7 +262,7 @@ public class Piano extends javax.swing.JFrame {
         B.setBounds(420, 210, 60, 249);
 
         C1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        C1.setText("C1");
+        C1.setText("Do");
         C1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         C1.setFocusable(false);
         C1.setSelected(true);
@@ -275,7 +276,7 @@ public class Piano extends javax.swing.JFrame {
         C1.setBounds(490, 210, 60, 249);
 
         D2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        D2.setText("D2");
+        D2.setText("Re");
         D2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         D2.setFocusable(false);
         D2.setSelected(true);
@@ -289,7 +290,7 @@ public class Piano extends javax.swing.JFrame {
         D2.setBounds(560, 210, 60, 249);
 
         E3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        E3.setText("E3");
+        E3.setText("Mi");
         E3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         E3.setFocusable(false);
         E3.setSelected(true);
@@ -627,7 +628,6 @@ public class Piano extends javax.swing.JFrame {
                 grab.setVisible(true);
             }
         });
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -30,8 +30,11 @@ public class GrabadorAudio extends javax.swing.JFrame {
 
     private void initComponents() {
         
+        this.setFocusableWindowState(false);
+        this.setAlwaysOnTop(true);
         this.setLocation(700, 0);
         this.setResizable(false);
+        this.setTitle("Grabador de Audio");
         jB_Grabar = new javax.swing.JButton();
         jB_Parar = new javax.swing.JButton();
         jB_Ruta = new javax.swing.JButton();
