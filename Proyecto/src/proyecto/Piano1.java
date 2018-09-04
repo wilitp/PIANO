@@ -32,9 +32,6 @@ public class Piano1 extends javax.swing.JFrame {
         synth.loadInstrument(instr[10]);
         JButton[] botones = {G, Gs, A, Bb, B, C, Cs, D, Ds, E, F, Fs, G2, Gs2, A2, Bb2, B2};
         InputCheck1 c1 = new InputCheck1(botones, mc, 0);
-        InputCheck1 c2 = new InputCheck1(botones, mc, 1);
-        InputCheck1 c3 = new InputCheck1(botones, mc, 2);
-        InputCheck1 c4 = new InputCheck1(botones, mc, 3);
     }
 
     @SuppressWarnings("unchecked")
